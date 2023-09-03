@@ -45,19 +45,11 @@ class Solution
     //Function to check if two strings are rotations of each other or not.
     public static boolean areRotations(String s1, String s2 )
     {
-        // for(int i = 0; i < s1.length(); i++)
-        // {
-        //         String sub = s1.substring(0,i+1);
-        //         String rotated_r = s1.substring(i,s1.length()) + sub;
-        //         if(rotated_r.equals(s2));
-        //         return true;
-        // }
-        // return false
         if(s1.length() != s2.length())
         return false;
         
         for(int i = 0 ; i< s1.length(); i++){
-            String s = s1.substring(i,s1.length()) + s1.substring(0,i);
+            String s = s1.substring(i) + s1.substring(0,i);
             if(s.equals(s2))
             {
                return true;
